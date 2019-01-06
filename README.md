@@ -1,2 +1,3 @@
 # storage-db
-indexDB simple
+
+精简版indexDB,简易移动端使用。

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>storageDB</title>
+  <script src="../dist/storage-min.js"></script>
+</head>
+<body>
+  <script>
+    var db = new StorageDB('testDB', 1);
+    // db.removeDB('testDB');
+    db.setItem('name', 'xiongqi123');
+    db.setItem('page', {a:1});
+  </script>
+</body>
+</html>

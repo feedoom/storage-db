@@ -1,0 +1,40 @@
+{
+  "name": "storage-db",
+  "version": "1.0.0",
+  "description": "simple indexDB",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weyos/storage-db.git"
+  },
+  "keywords": [
+    "indexDB"
+  ],
+  "author": "weyos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weyos/storage-db/issues"
+  },
+  "homepage": "https://github.com/weyos/storage-db#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/runtime": "^7.2.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-latest": "^6.24.1",
+    "rollup": "^1.0.2",
+    "rollup-plugin-async": "^1.2.0",
+    "rollup-plugin-babel": "^4.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-regenerator": "^0.6.0"
+  },
+  "dependencies": {
+    "lie": "^3.3.0"
+  }
+}
