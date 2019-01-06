@@ -2,9 +2,10 @@
   "name": "storage-db",
   "version": "1.0.0",
   "description": "simple indexDB",
-  "main": "index.js",
+  "main": "dist/storage.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",

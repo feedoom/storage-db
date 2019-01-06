@@ -6,7 +6,7 @@ import regenerator from 'rollup-plugin-regenerator';
 export default {
   input: 'src/storageDB.js',
   output: {
-    file: 'dist/storage-min.js',
+    file: 'dist/storage.js',
     format: 'umd',
     name: 'StorageDB',
   },
