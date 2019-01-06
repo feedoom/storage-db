@@ -1,5 +1,5 @@
 {
-  "name": "@weyos/storagedb",
+  "name": "dbstorage",
   "version": "0.0.1",
   "description": "simple indexDB",
   "main": "dist/storage.js",

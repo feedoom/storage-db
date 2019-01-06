@@ -5,7 +5,7 @@
 ## 安装
 
 ```sh
-npm install @weyos/storagedb
+npm install dbstorage
 ```
 
 ## 初始化
