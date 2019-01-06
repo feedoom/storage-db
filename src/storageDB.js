@@ -8,6 +8,11 @@ const getData = Symbol('getData');
 const removeData = Symbol('removeData');
 const removeDB = Symbol('removeDB');
 
+/**
+ * @param {dbName} string 数据库名称
+ * @param {version} number 数据库版本号
+ * @description 初始化indexDB
+ */
 export default class StorageDB {
   constructor(dbName, version){
     this.dbName = dbName;
@@ -86,7 +91,11 @@ export default class StorageDB {
   [removeDB](dbName) {
     idb.deleteDatabase(dbName);
   }
-  // 插入数据
+  /**
+   * @param {key} string
+   * @param {value} any
+   * @description 插入数据
+   */
   async setItem(key, value)  {
     if(!this[db]) {
       this[db] = await this[openDB]();
@@ -94,7 +103,10 @@ export default class StorageDB {
     await this[putData](key, value);
     return this[db];
   }
-  // 获取数据
+  /**
+   * @param {key} string
+   * @description 获取数据
+   */
   async getItem(key) {
     if(!this[db]) {
       this[db] = await this[openDB]();
@@ -102,14 +114,20 @@ export default class StorageDB {
     const data = await this[getData](key);
     return data;
   }
-  // 删除数据
+  /**
+   * @param {key} string
+   * @description 删除数据
+   */
   async removeItem(key) {
     if(!this[db]) {
       this[db] = await this[openDB]();
     }
     await this[removeData](key);
   }
-  // 删除数据库
+  /**
+   * @param {dbName} string
+   * @description 删除数据库
+   */
   removeDB(dbName) {
     this[removeDB](dbName);
   }
