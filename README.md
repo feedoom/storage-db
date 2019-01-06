@@ -2,6 +2,12 @@
 
 精简版indexDB，简易移动端使用，完善中。。。
 
+## 安装
+
+```sh
+npm install @weyos/storagedb
+```
+
 ## 初始化
 
 ```js
