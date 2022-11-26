@@ -29,11 +29,12 @@ Promise需自行引入polyfill
 ```js
 /**
  * @param {dbName} string 数据库名称
+ * @param {storeName} string store 名称
  * @param {version} number 数据库版本号
  * @description 初始化indexDB
  */
 
-const dbstorage = new StroageDB(dbName, version);
+const dbstorage = new StroageDB(dbName, store, version);
 ```
 
 ## 存储/更新
@@ -62,6 +63,37 @@ dbstorage.getItem('author').then((result) => {
 });
 ```
 
+## 获取所有key
+
+```js
+/**
+ * @description 获取所有key
+ */
+dbstorage.keys().then((result) => {
+  // do something
+});
+```
+
+## 获取所有数据
+
+```js
+/**
+ * @description 获取所有数据
+ */
+dbstorage.values().then((result) => {
+  // do something
+});
+```
+
+## 关闭数据库连接
+
+```js
+/**
+ * @description 关闭数据库连接
+ */
+dbstorage.closeDB()
+```
+
 ## 删除某条数据
 
 ```js
@@ -70,6 +102,29 @@ dbstorage.getItem('author').then((result) => {
  * @description 删除数据
  */
 dbstorage.removeItem('author').then(() => {
+  // do something
+});
+```
+
+## 删除所有数据
+
+```js
+/**
+ * @description 删除所有数据
+ */
+dbstorage.clear().then(() => {
+  // do something
+});
+```
+
+## 删除store
+
+```js
+/**
+ * @param {storeName} string
+ * @description 删除store
+ */
+dbstorage.removeStore(storeName).then(() => {
   // do something
 });
 ```
