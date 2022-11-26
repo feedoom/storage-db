@@ -2,6 +2,8 @@
 
 精简版indexDB，简易移动端使用。
 
+对 [storage-db](https://github.com/weyos/storage-db) 添加亿点功能
+
 ## 安装
 
 ```sh
