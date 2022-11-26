@@ -22,8 +22,8 @@ const removeAllData = Symbol('removeAllData');
  */
 export default class Storage {
   constructor(dbName, storeName, version){
-    this.dbName = dbName;
-    this.storeName = storeName;
+    this.dbName = dbName || 'baseDB';
+    this.storeName = storeName || 'baseStore';
     this.version = version;
     this[db] = null;
   }
