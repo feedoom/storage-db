@@ -7,13 +7,13 @@
 ## 安装
 
 ```sh
-npm install dbstorage
+npm install @feedoom/dbstorage
 ```
 
 ## 引入
 
 ```js
-import StorageDB from 'dbstorage';
+import StorageDB from '@feedoom/dbstorage';
 ```
 
 默认不做任何编译处理
@@ -21,7 +21,7 @@ import StorageDB from 'dbstorage';
 如需编译处理过的js
 
 ```js
-import StorageDB from 'dbstorage/lib/storage';
+import StorageDB from '@feedoom/dbstorage/lib/storage';
 ```
 
 Promise需自行引入polyfill
