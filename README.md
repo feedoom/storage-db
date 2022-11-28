@@ -95,6 +95,13 @@ dbstorage.values().then((result) => {
  * @description 关闭数据库连接
  */
 dbstorage.closeDB()
+
+// 同一个数据库建立多个store，需关闭除此之外所有数据库的连接
+const store1 = new StroageDB('db', 'store1')
+await store1.setItem(age, 1)
+await store1.closeDB()
+const store2 = new StroageDB('db', 'store2')
+await store2.setItem(age, 2)
 ```
 
 ## 删除某条数据
