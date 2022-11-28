@@ -36,6 +36,7 @@ Promise需自行引入polyfill
  * @description 初始化indexDB
  */
 
+// 不传参数，默认数据库名 baseDB, 默认store为baseStore, 默认版本为1
 const dbstorage = new StroageDB(dbName, store, version);
 ```
 
